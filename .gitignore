@@ -1,0 +1,16 @@
+# Node.js modules
+node_modules/
+
+# Build output
+build/
+
+# Environment variables
+.env
+
+# Operating System files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
