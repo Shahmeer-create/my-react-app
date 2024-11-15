@@ -1,16 +1,20 @@
 version: 1.0
+
+# Build environment (optional but recommended)
+runtime: nodejs14.x  # Change this if you're using a different version of Node.js
+
 frontend:
   phases:
     preBuild:
       commands:
-        - npm install  
+        - npm install  # Install npm dependencies
     build:
       commands:
-        - npm run build  
+        - npm run build  # Run the build command (creates production build)
   artifacts:
-    baseDirectory: build  
+    baseDirectory: build  # The directory that contains the production build
     files:
-      - '**/*'  
+      - '**/*'  # Include all files in the build folder
   cache:
     paths:
-      - node_modules/**/*
+      - node_modules/**/*  # Cache node_modules to speed up subsequent builds
